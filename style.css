@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #334155;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 260px;
+    background-color: #0f172a;
+    padding: 40px 20px;
+    color: #ffffff;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+aside nav a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+aside nav a:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.conteudo {
+    flex: 1;
+    padding: 40px;
+}
+
+.conteudo h1 {
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#inicio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: 700px;
+}
+
+.link-externo {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.link-externo:hover {
+    color: #1d4ed8;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #ffffff;
+}
+
+input[type="text"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+button {
+    padding: 14px 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+#listaTarefas {
+    max-width: 600px;
+    margin-top: 15px;
+}
+
+.tarefa {
+    background-color: #ffffff;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.tarefa:hover {
+    transform: translateX(3px);
+}
+
+.tarefa span {
+    cursor: pointer;
+    font-weight: 500;
+    flex: 1;
+}
+
+.tarefa button.remover {
+    padding: 8px 14px;
+    background-color: #ef4444;
+    font-size: 0.85rem;
+}
+
+.tarefa button.remover:hover {
+    background-color: #dc2626;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    margin-top: 10px;
+    outline: none;
+}
+
+footer {
+    background-color: #0f172a;
+    text-align: center;
+    padding: 15px;
+    color: #64748b;
+    font-size: 0.85rem;
+    border-top: 1px solid #1e293b;
+}
+
+body.escuro {
+    background-color: #0b0f19;
+    color: #f1f5f9;
+}
+
+body.escuro .conteudo h1 {
+    color: #ffffff;
+}
+
+body.escuro #inicio p {
+    color: #cbd5e1;
+}
+
+body.escuro .link-externo {
+    color: #60a5fa;
+}
+
+body.escuro input[type="text"], 
+body.escuro select {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: 1px solid #334155;
+}
+
+body.escuro .tarefa {
+    background-color: #1e293b;
+    color: #ffffff;
+    border-left-color: #3b82f6;
+}

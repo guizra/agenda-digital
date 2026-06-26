@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda Digital - Guilherme Zaranski</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <aside>
+            <h2>🚀 Minha Agenda</h2>
+            <nav>
+                <a onclick="mostrarTela('inicio')">🏠 Início</a>
+                <a onclick="mostrarTela('tarefas')">📋 Tarefas</a>
+                <a onclick="mostrarTela('config')">⚙️ Configuração</a>
+            </nav>
+        </aside>
+
+        <section class="conteudo">
+            
+            <div id="inicio" class="tela ativa">
+                <h1>Bem-vindo à sua Agenda Digital!</h1>
+                <p>Este site foi desenvolvido como um projeto escolar para organizar o dia a dia, permitindo listar compromissos, marcar as atividades concluídas de forma interativa e alternar a visualização de telas através do menu lateral.</p>
+                <p>O gerenciamento de rotinas é fundamental para melhorar o foco e a produtividade nos estudos e no trabalho.</p>
+                <p>Para entender melhor como a organização do tempo impacta positivamente o seu rendimento, acesse este <a href="https://pt.wikipedia.org/wiki/Gest%C3%A3o_de_tempo" target="_blank" class="link-externo">guia explicativo sobre Gestão de Tempo</a>.</p>
+            </div>
+
+            <div id="tarefas" class="tela">
+                <h1>Minhas tarefas</h1>
+                
+                <div class="input-container">
+                    <input type="text" id="tarefaInput" placeholder="Digite uma tarefa...">
+                    <button onclick="adicionarTarefa()">✔ Adicionar tarefa</button>
+                </div>
+
+                <p>Total de tarefas: <span id="contador">0</span></p>
+                <div id="listaTarefas"></div>
+            </div>
+
+            <div id="config" class="tela">
+                <h1>Configuração</h1>
+                <div class="config-control">
+                    <label for="tema">Tema da Página:</label>
+                    <select id="tema" onchange="alterarTema()">
+                        <option value="claro">Claro (Azul Escuro Padrão)</option>
+                        <option value="escuro">Modo Breu (Totalmente Escuro)</option>
+                    </select>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por Guilherme Zaranski - 3º Ano</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
